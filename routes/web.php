@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('paper');
 });
 
+Route::get('/byty', function () {
+    return view('byty');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
