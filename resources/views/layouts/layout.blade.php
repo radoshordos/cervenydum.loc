@@ -15,8 +15,8 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <div class="text-center">
-                        <h1>Čevený dům Benešov</h1>
-                        <h3>the less formal CSS framework</h3>
+                        <h1>Čevený dům </h1>
+                        <h3>Benešov</h3>
                     </div>
                 </div>
             </div>
