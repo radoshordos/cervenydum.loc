@@ -30,8 +30,5 @@
             @include('layouts.sidebar')
         </div>
     </div>
-</div>
-
-
 </body>
 </html>

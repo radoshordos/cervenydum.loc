@@ -21,6 +21,12 @@ Route::get('/byty', function () {
     return view('byty');
 });
 
+Route::get('/souvisejici-projekty', function () {
+    return view('souvisejici-projekty');
+});
+
+Route::get('/pro-zajemce', [App\Http\Controllers\Zajemci::class, 'index'])->name('zajemci');
+
 
 Auth::routes();
 
