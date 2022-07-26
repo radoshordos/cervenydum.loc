@@ -25,6 +25,7 @@ Route::get('/souvisejici-projekty', function () {
     return view('souvisejici-projekty');
 });
 
+Route::get('/souvisejici-projekty', [App\Http\Controllers\SouvisejiciProjekty::class, 'index'])->name('zajemci');
 Route::get('/pro-zajemce', [App\Http\Controllers\Zajemci::class, 'index'])->name('zajemci');
 
 
