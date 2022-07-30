@@ -2,6 +2,17 @@ body {
     background-image: url("img/brick.png");
 }
 
+a {
+    text-decoration: underline;
+    background-image: none;
+    color: black;
+}
+
+li {
+    font-family: Arial, serif;
+    margin: .5em;
+}
+
 html.dark body {
     background: #41403e;
 }

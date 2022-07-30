@@ -1,34 +1,107 @@
 @extends('layouts.layout')
 
+@section('title', 'Byty')
+
 @section('content')
-    <table>
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Location</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bob Dylan</td>
-            <td>Musician</td>
-            <td>California, USA</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Eric Clapton</td>
-            <td>Musician</td>
-            <td>Ohio, USA</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Daniel Kahneman</td>
-            <td>Psychologist</td>
-            <td>California, USA</td>
-        </tr>
-        </tbody>
-    </table>
+
+    <div class="paper container margin-bottom-large">
+        <table>
+            <thead>
+            <tr>
+                <th>Dispozice</th>
+                <th>Typ</th>
+                <th>Terasa / Garáž</th>
+                <th>Cena</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1 NP</td>
+                <td>Nebytový prostor</td>
+                <td>NE / NE</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>1 NP</td>
+                <td>Nebytový prostor</td>
+                <td>NE / NE</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>2 NP</td>
+                <td>Byt "A" – 2+kk</td>
+                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>2 NP</td>
+                <td>Byt "B" – 3+kk</td>
+                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>3 NP</td>
+                <td>Byt "A" – 2+kk</td>
+                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>3 NP</td>
+                <td>Byt "B" – 3+kk</td>
+                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>4 NP</td>
+                <td>Byt "A" – 2+kk</td>
+                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>4 NP</td>
+                <td>Byt "B" – 3+kk</td>
+                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>5 NP</td>
+                <td>Byt "A" – 2+kk</td>
+                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>5 NP</td>
+                <td>Byt "B" – 3+kk</td>
+                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            <tr>
+                <td>6 NP</td>
+                <td>Byt "C" – 4+kk</td>
+                <td>44,0 m<sup>2</sup> / ANO 1x</td>
+                <td>Nestanovena</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <div class="paper container margin-bottom-large">
+        <h4>Typy bytů</h4>
+
+        <strong>Typ "A" a typ "B"</strong>
+        <a href="/pdf/04-pudorys-2-5np.pdf">
+            <img src="/png/04-pudorys-2-5np.png" style="margin: 1em" alt="">
+        </a>
+        <strong>Typ "C"</strong>
+        <a href="/pdf/05-pudorys-6np.pdf">
+            <img src="/png/05-pudorys-6np.png" style="margin: 1em" alt="">
+        </a>
+        <strong>Nebytový prostor</strong>
+        <a href="/pdf/02-pudorys-1np.pdf">
+            <img src="/png/02-pudorys-1np.png" style="margin: 1em" alt="">
+        </a>
+    </div>
+
 @endsection

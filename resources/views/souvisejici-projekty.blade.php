@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@section('title', 'Související projekty')
+
 @section('content')
 
     <div class="paper container margin-bottom-large text-center"  style="margin: auto">
@@ -13,8 +15,5 @@
         <p>Realizace: 199X</p>
         <img src="/foto/20220328_140620.jpg" alt="Budova - Modrý dům">
     </div>
-
-
-
 
 @endsection

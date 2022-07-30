@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css">
-    <link rel="stylesheet" href="/css/demo-paper.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/paper.css">
+    <title>@yield('title') - Červený dům Benešov</title>
 </head>
 <body cz-shortcut-listen="true">
 <div id="top" class="row site">
@@ -15,7 +15,7 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <div class="text-center">
-                        <h1>Čevený dům </h1>
+                        <h1>Červený dům</h1>
                         <h3>Benešov</h3>
                     </div>
                 </div>

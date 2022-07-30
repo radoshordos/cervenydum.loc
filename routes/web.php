@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('paper');
-});
+
+Route::get('/', [App\Http\Controllers\Aktuality::class, 'index'])->name('aktuality');
 
 Route::get('/byty', function () {
     return view('byty');
