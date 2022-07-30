@@ -9,8 +9,8 @@
         <div class="row">
             <div class="col sm-12">
                 <div class="form-group">
-                    <label for="typ-bytu">Zájem o</label>
-                    <select id="typ-bytu" required>
+                    <label for="byt_id">Zájem o</label>
+                    <select id="byt_id" required>
                         <option value=""></option>
                         @foreach($byty as $byt)
                             <option value="{{ $byt->id }}">{{ $byt->value }}</option>
@@ -37,7 +37,7 @@
             <div class="col sm-4">
                 <div class="form-group">
                     {{ Form::label('phone', 'Telefon') }}
-                    {{ Form::tel('phone', null, ['id' => 'phone', 'required', 'class' => 'input-block']) }}
+                    {{ Form::tel('phone', null, ['id' => 'phone', 'required', 'class' => 'input-block', 'maxlenght' => 9, 'minlenght' => 9, 'placeholder' => '602XXXXXX']) }}
                 </div>
             </div>
             <div class="col sm-8">
