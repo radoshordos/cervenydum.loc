@@ -10,75 +10,75 @@
             <tr>
                 <th>Dispozice</th>
                 <th>Typ</th>
-                <th>Terasa / Garáž</th>
+                <th>Terasa / Sklep / Garáž</th>
                 <th>Cena</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>1 NP</td>
-                <td>Nebytový prostor</td>
-                <td>NE / NE</td>
+                <td>Nebytový prostor – I</td>
+                <td>NE / NE / NE</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>1 NP</td>
-                <td>Nebytový prostor</td>
-                <td>NE / NE</td>
+                <td>Nebytový prostor – II</td>
+                <td>NE / NE / NE</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>2 NP</td>
                 <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>2 NP</td>
                 <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>3 NP</td>
                 <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>3 NP</td>
                 <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>4 NP</td>
                 <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>4 NP</td>
                 <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>5 NP</td>
                 <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO 1x</td>
+                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>5 NP</td>
                 <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO 1x</td>
+                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             <tr>
                 <td>6 NP</td>
                 <td>Byt "C" – 4+kk</td>
-                <td>44,0 m<sup>2</sup> / ANO 1x</td>
+                <td>44,0 m<sup>2</sup> / ANO / ANO 1x</td>
                 <td>Nestanovena</td>
             </tr>
             </tbody>
