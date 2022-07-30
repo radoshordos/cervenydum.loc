@@ -12,10 +12,9 @@
                     <label for="typ-bytu">Zájem o</label>
                     <select id="typ-bytu" required>
                         <option value=""></option>
-                        <option value="1">Velikost bytu 2kk</option>
-                        <option value="2">Velikost bytu 3kk</option>
-                        <option value="3">Velikost bytu 4kk</option>
-                        <option value="3">Nebytový prostor</option>
+                        @foreach($byty as $byt)
+                            <option value="{{ $byt->id }}">{{ $byt->value }}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>

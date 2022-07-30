@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Byt;
 
 class Zajemci extends Controller
 {
     public function index()
     {
-        return view('zajemci');
+        return view('zajemci', [
+            'byty' => Byt::orderBy('id')->get()
+        ]);
     }
 }
