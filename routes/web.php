@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AktualityController;
+use App\Http\Controllers\ZajemciController;
+use App\Http\Controllers\BytyController;
+use App\Http\Controllers\SouvisejiciProjektyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [App\Http\Controllers\Aktuality::class, 'index'])->name('aktuality');
-
-Route::get('/byty', function () {
-    return view('byty');
-});
-
-Route::get('/souvisejici-projekty', function () {
-    return view('souvisejici-projekty');
-});
-
-Route::get('/souvisejici-projekty', [App\Http\Controllers\SouvisejiciProjekty::class, 'index'])->name('zajemci');
-Route::get('/pro-zajemce', [App\Http\Controllers\Zajemci::class, 'index'])->name('zajemci');
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/', AktualityController::class)->names('aktuality')->only(['index']);
+Route::resource('/byty', BytyController::class)->names('byty')->only(['index']);
+Route::resource('/souvisejici-projekty', SouvisejiciProjektyController::class)->names('souvisejici')->only(['index']);
+Route::resource('/pro-zajemce', ZajemciController::class)->names('zajemci')->only(['index', 'store']);

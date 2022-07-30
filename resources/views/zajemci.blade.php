@@ -3,7 +3,7 @@
 @section('title', 'Poptat nemovitost')
 
 @section('content')
-    {!! Form::open(['url' => '']) !!}
+    {{ Form::open(['route' => 'zajemci.store']) }}
     <div class="paper container margin-bottom-large">
         <h4>Poptat nemovitost?</h4>
         <div class="row">
@@ -37,7 +37,7 @@
             <div class="col sm-4">
                 <div class="form-group">
                     {{ Form::label('phone', 'Telefon') }}
-                    {{ Form::tel('phone', null, ['id' => 'phone', 'required', 'class' => 'input-block', 'maxlenght' => 9, 'minlenght' => 9, 'placeholder' => '602XXXXXX']) }}
+                    {{ Form::tel('phone', null, ['id' => 'phone', 'required', 'class' => 'input-block', 'minlength' => 9, 'maxlength' => 9, 'placeholder' => '602XXXXXX']) }}
                 </div>
             </div>
             <div class="col sm-8">
@@ -49,21 +49,17 @@
         </div>
         <div class="row">
             <div class="col">
-
                 <fieldset class="form-group">
                     <label class="paper-switch">
-                        <input id="paperSwitch6" name="paperSwitch6" type="checkbox" required/>
+                        <input id="agreement" name="agreement" type="checkbox" required/>
                         <span class="paper-switch-slider round"></span>
                     </label>
-                    <label for="paperSwitch6" class="paper-switch-label">
-                        <br />
+                    <label for="agreement" class="paper-switch-label">
+                        <br/> <!-- https://www.luxent.cz/obchodni-a-pravni-ujednani/  -->
                         * Souhlasím se zpracováním a uchováním osobních údajů. Úplné znění podmínek naleznete <a>zde</a>.
                     </label>
                 </fieldset>
             </div>
-
-            <!-- https://www.luxent.cz/obchodni-a-pravni-ujednani/  -->
-
         </div>
         <div class="row">
             <div class="col-12">
@@ -75,5 +71,5 @@
             </div>
         </div>
     </div>
-    {!! Form::close() !!}
+    {{ Form::close() }}
 @endsection

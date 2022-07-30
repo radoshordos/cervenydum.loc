@@ -21,6 +21,7 @@
                 </div>
             </div>
             <div class="section">
+                @include('layouts/alert-notification')
                 @yield('content')
             </div>
         </div>

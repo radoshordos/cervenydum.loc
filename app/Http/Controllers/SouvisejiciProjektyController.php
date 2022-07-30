@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class SouvisejiciProjekty extends Controller
+class SouvisejiciProjektyController extends Controller
 {
     public function index()
     {
