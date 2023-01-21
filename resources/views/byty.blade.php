@@ -3,92 +3,37 @@
 @section('title', 'Byty')
 
 @section('content')
-
     <div class="paper container margin-bottom-large">
         <table>
             <thead>
             <tr>
                 <th>Dispozice</th>
-                <th>Typ</th>
-                <th>Terasa / Sklep / Garáž</th>
+                <th>Typ / m<sup>2</sup></th>
+                <th>Lodžie / Sklep / Garáž</th>
                 <th>Cena</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>1 NP</td>
-                <td>Nebytový prostor – I</td>
-                <td>NE / NE / NE</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>1 NP</td>
-                <td>Nebytový prostor – II</td>
-                <td>NE / NE / NE</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>2 NP</td>
-                <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>2 NP</td>
-                <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>3 NP</td>
-                <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>3 NP</td>
-                <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>4 NP</td>
-                <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>4 NP</td>
-                <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>5 NP</td>
-                <td>Byt "A" – 2+kk</td>
-                <td>9,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>5 NP</td>
-                <td>Byt "B" – 3+kk</td>
-                <td>11,6 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
-            <tr>
-                <td>6 NP</td>
-                <td>Byt "C" – 4+kk</td>
-                <td>44,0 m<sup>2</sup> / ANO / ANO 1x</td>
-                <td>Nestanovena</td>
-            </tr>
+            @foreach($apartments as $apartment)
+                <tr>
+                    <td>{{ $apartment->floor }}</td>
+                    <td>{{ $apartment->byty->name }} / {{ str_replace('.',',', $apartment->byty->useful_area) }} m<sup>2</sup></td>
+                    <td>{{ $apartment->loggia }} / {{ $apartment->cellar }} / {{ $apartment->garage }}</td>
+                    <td>
+                        @if($apartment->selling_status !== \App\Models\Apartment::SELL_WORD)
+                            {{ $apartment->selling_status }}
+                        @else
+                            {{ $apartment->selling_price }} Kč
+                        @endif
+                    </td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
-
-
     </div>
 
     <div class="paper container margin-bottom-large">
-        <h4>Typy bytů</h4>
+        <h4>Typy bytů - verze roku 2020</h4>
 
         <strong>Typ "A" a typ "B"</strong>
         <a href="/pdf/04-pudorys-2-5np.pdf">

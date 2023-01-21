@@ -6,19 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
 
-    public const TABLE = 'poptavka';
+    public const TABLE = 'apartment';
 
     public function up(): void
     {
         Schema::create(self::TABLE, static function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('byt_id');
-            $table->string('name', 255)->unique();
-            $table->string('surname', 255)->unique();
-            $table->string('address', 255)->unique();
-            $table->string('email', 255)->unique();
-            $table->string('agreement', 3)->nullable();
-            $table->timestampsTz();
+            $table->string('floor', 24);
+            $table->enum('loggia', ['NE', 'ANO']);
+            $table->enum('cellar', ['NE', 'ANO']);
+            $table->enum('garage', ['NE', 'ANO', 'ANO 1x']);
+            $table->decimal('selling_price', 8, 0)->default(15000000);
+            $table->enum('selling_status', ['Prodej', 'Nestanovena', 'Rezervováno', 'Prodáno'])->default('Prodej');
             $table->foreign('byt_id')->references('id')->on('byt')->onUpdate('cascade')->onDelete('no action');
         });
     }

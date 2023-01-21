@@ -16,12 +16,12 @@ class StorePoptavka extends FormRequest
     public function rules(): array
     {
         return [
-            'byt_id'    => ['required', 'int', new Exists(Byt::class, 'id')],
+            'byt_id'    => ['string', new Exists(Byt::class, 'id')],
             'name'      => ['required', 'string', 'min:2', 'max:32'],
             'surname'   => ['required', 'string', 'min:2', 'max:64'],
             'phone'     => ['required', 'string', 'min:9', 'max:9'],
             'email'     => ['required', 'string', 'min:5', 'max:255'],
-            'agreement' => ['required', 'boolean']
+            'agreement' => ['accepted']
         ];
     }
 }

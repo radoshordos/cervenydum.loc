@@ -10,9 +10,10 @@ return new class extends Migration {
 
     public function up(): void
     {
-        Schema::create(self::TABLE, function (Blueprint $table) {
-            $table->unsignedInteger('id')->unique();
-            $table->string('value', 255)->unique();
+        Schema::create(self::TABLE, static function (Blueprint $table) {
+            $table->unsignedInteger('id')->primary();
+            $table->string('name', 64)->unique();
+            $table->decimal('useful_area', 5, 1)->unique();
         });
     }
 

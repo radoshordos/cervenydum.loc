@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AktualityController;
-use App\Http\Controllers\ZajemciController;
+use App\Http\Controllers\CandidatesController;
 use App\Http\Controllers\BytyController;
 use App\Http\Controllers\SouvisejiciProjektyController;
 
@@ -21,4 +21,4 @@ use App\Http\Controllers\SouvisejiciProjektyController;
 Route::resource('/', AktualityController::class)->names('aktuality')->only(['index']);
 Route::resource('/byty', BytyController::class)->names('byty')->only(['index']);
 Route::resource('/souvisejici-projekty', SouvisejiciProjektyController::class)->names('souvisejici')->only(['index']);
-Route::resource('/pro-zajemce', ZajemciController::class)->names('zajemci')->only(['index', 'store']);
+Route::resource('/pro-zajemce', CandidatesController::class)->names('zajemci')->only(['index', 'store']);

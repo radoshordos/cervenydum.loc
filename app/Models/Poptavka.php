@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Poptavka extends Model
 {
     protected $table = 'poptavka';
+    public $timestamps = true;
 }

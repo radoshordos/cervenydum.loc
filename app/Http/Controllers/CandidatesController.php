@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePoptavka;
 use App\Models\Byt;
 use App\Models\Poptavka;
+use Illuminate\Http\RedirectResponse;
 
-class ZajemciController extends Controller
+class CandidatesController extends Controller
 {
     public function index()
     {
@@ -15,11 +16,10 @@ class ZajemciController extends Controller
         ]);
     }
 
-    public function store(StorePoptavka $request)
+    public function store(StorePoptavka $request): RedirectResponse
     {
         $v = $request->validated();
-        Poptavka::created($v);
-
-        return redirect()->route('zajemci.index')->with('Dekujeme ua podání poptávky');
+        dd($v, Poptavka::created($v));
+        return redirect()->route('zajemci.index')->with('success','Děkujeme za podání poptávky');
     }
 }

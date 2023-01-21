@@ -1,9 +1,3 @@
-@if ($notification = Session::get('success'))
-    <div class="row flex-spaces">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>{{ $notification }}</strong>
-    </div>
-@endif
 @if ($notification = Session::get('error'))
     <div class="row flex-spaces">
         <button type="button" class="close" data-dismiss="alert">×</button>
