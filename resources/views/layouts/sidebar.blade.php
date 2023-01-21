@@ -6,5 +6,6 @@
         <label for="collapsible-components"><a href="{{ route('souvisejici.index') }}">Související projekty</a></label>
         <label for="collapsible-components"><a href="{{ route('byty.index') }}">Byty</a></label>
         <label for="collapsible-components"><a href="{{ route('zajemci.index') }}">Pro zájemnce</a></label>
+        <label for="collapsible-components"><a href="{{ route('partneri.index') }}">Partneři projektu</a></label>
     </div>
 </div>
