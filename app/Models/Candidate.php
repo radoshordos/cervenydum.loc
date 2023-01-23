@@ -9,5 +9,5 @@ class Candidate extends Model
     public $timestamps = true;
     protected $table = 'poptavka';
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 }
