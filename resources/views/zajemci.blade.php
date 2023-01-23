@@ -1,5 +1,4 @@
 @extends('layouts.layout')
-
 @section('title', 'Poptat nemovitost')
 
 @section('content')
@@ -16,7 +15,7 @@
                 <div class="col sm-12">
                     <div class="form-group">
                         {{ Form::label('byt_id', 'Zájem o') }}
-                        <select id="byt_id" required>
+                        <select id="byt_id" name="byt_id" required>
                             <option value=""></option>
                             @foreach($byty as $byt)
                                 <option value="{{ $byt->id }}">{{ $byt->name }}</option>

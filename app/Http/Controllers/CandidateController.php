@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePoptavka;
 use App\Models\Byt;
-use App\Models\Poptavka;
+use App\Models\Candidate;
 use Illuminate\Http\RedirectResponse;
+use Log;
 
-class CandidatesController extends Controller
+class CandidateController extends Controller
 {
     public function index()
     {
@@ -19,7 +20,12 @@ class CandidatesController extends Controller
     public function store(StorePoptavka $request): RedirectResponse
     {
         $v = $request->validated();
-        dd($v, Poptavka::created($v));
+
+        Log::debug($v);
+
+        $x = Candidate::create($request->validated());
+
+
         return redirect()->route('zajemci.index')->with('success','Děkujeme za podání poptávky');
     }
 }

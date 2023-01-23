@@ -1,5 +1,4 @@
 @extends('layouts.layout')
-
 @section('title', 'Aktuality')
 
 @section('content')
